@@ -1,11 +1,15 @@
 let result = document.getElementById('result')
 let planetData = document.getElementById('planetData')
 
-async function printPlanet() {
+async function fetchPlanet() {
     let res = await fetch('https://swapi.dev/api/planets/')
     let {results} = await res.json()
+    return results;
+}
 
-    results.forEach(planet => {
+async function printPlanet() {
+    let planets = await fetchPlanet();
+    planets.forEach(planet => {
         console.log(planet.name)
         let button = document.createElement('button');
         button.innerHTML = planet.name;
@@ -13,6 +17,16 @@ async function printPlanet() {
         result.appendChild(button);
     });
 };
+
+async function searchPlanet() {
+    let searchValue = document.getElementById('searchPlanet').value.toLowerCase();
+    let planets = await fetchPlanet();
+    planets.forEach(planet => {
+        if (planet.name.toLowerCase().includes(searchValue.toLowerCase())) {
+            getPlanetData(planet);
+        }
+    });
+}
 
 function getPlanetData(planet) {
     planetData.innerHTML = `
