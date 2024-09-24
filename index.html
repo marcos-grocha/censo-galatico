@@ -8,15 +8,24 @@
 <body>
     <div>
         <h1>Censo Galático</h1>
-        <h2>1 - Sua primeira tarefa vai ser criar uma página index.html e nela, usando JS, consumir a listagem de planetas da API. Os planetas devem ser exibidos no console do navegador como uma lista.</h2>
+        <h2>2 - Agora você deve começar a escrever HTML. 
+            Para cada planeta obtido na API no passo anterior, crie um botão na tela. 
+            Por enquanto este botão não precisa de nenhuma ação, basta exibir o nome do planeta no texto do botão.</h2>
     </div>
+    <div id="result"></div>
     <script>
+        let result = document.getElementById('result')
         async function printPlanet() {
             let res = await fetch('https://swapi.dev/api/planets/')
             let {results} = await res.json()
 
             results.forEach(planet => {
                 console.log(planet.name)
+                let button = document.createElement('button');
+                button.innerHTML = `
+                    ${planet.name}
+                    `;
+                result.appendChild(button);
             });
         };
         printPlanet()
