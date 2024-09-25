@@ -10,15 +10,18 @@
 <body>
     <header>
         <h1>Censo Galático</h1>
-        <p>4 - Crie um campo do tipo texto, usando a tag input e faça uma busca por planetas em modo texto.</p>
-        <p>O resultado da busca deve exibir todas as informações da tarefa 3.</p>
+        <p>Bônus - Para completar nosso censo, vamos incrementar o resultado da exibição de um planeta.</p>
+        <p>Além dos dados solicitados no passo 3, vamos exibir uma lista dos habitantes mais famosos do planeta selecionado.</p>
+        <p>Utilize os dados vindos no atributo residents para obter a URL de cada habitante.</p>
+        <p>Com esta URL, faça novas chamadas à API People para obter o nome e a data de nascimento de cada um deles.</p>
+        <p>Exiba estes dados como uma tabela HTML logo abaixo das informações do planeta.</p>
     </header>
     <section>
-        <input type="search" name="searchPlanet" id="searchPlanet" placeholder="Digite o nome do planeta"/>
+        <input type="text" name="searchPlanet" id="searchPlanet" placeholder="Digite o nome do planeta"/>
         <button onclick="searchPlanet()">Buscar</button>
-        <div id="planetData"></div>
-        <br>
-        <div id="result"></div>
+        <div id="planetData"></div> <br>
+        <table>  <tbody id="peopleData"></tbody> </table> <br>
+        <div id="allPlanets"></div>
     </section>
     <footer>
         <p>&copy;<a href="https://www.linkedin.com/in/marcos-grocha/" target="_blank"> marcos-grocha</a></p>

@@ -3,7 +3,6 @@ header {
     color: white;
     text-align: center;
 }
-
 body {
     font: normal 15pt Arial;
     height: 100vh;
@@ -17,11 +16,10 @@ section {
     background:  white;
     border-radius: 10px;
     padding: 15px;
-    width: 620px;
+    width: 746px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432);
 }
-
 footer {
     color: white;
     text-align: center;
@@ -36,6 +34,29 @@ footer a {
     text-decoration: none;
 }
 footer a:hover {
-    color: darkolivegreen;
+    color: #2d6462;
     text-decoration: underline;
+}
+button {
+    width: 73px;
+    height: 25px;
+    background-color: #53aaa7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 1px;
+}
+button:hover {
+    background-color: #2d6462;
+}
+table {
+    width:  400px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    position: relative;
+}
+td, th {
+    border: 1px solid black;
+    padding: 10px;
 }
