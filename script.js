@@ -38,7 +38,7 @@ function getPlanetData(planet) {
     peopleData.innerHTML = `
         <thead>
             <tr> <th colspan="2">Habitantes mais Famosos</th> </tr>
-            <tr> <th>Nome</th> <th>Aniversário</th>  </tr>
+            <tr> <th>Nome</th> <th>Ano de Nascimento</th>  </tr>
         </thead>
     `;
     planet.residents.forEach(resident => { peopleApi(resident) });
