@@ -1,6 +1,9 @@
 # Censo Galático 🌌
 O universo de Star Wars é composto de uma galáxia com inúmeros planetas e espécies, nesta aplicação podemos buscar esses dados através de consultas em APIs externas.
 
+## Funcionalidades
+- **Em**: Construção.
+  
 ## Tecnologias
 - **HTML**
 - **CSS**
