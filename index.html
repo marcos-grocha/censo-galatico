@@ -10,16 +10,31 @@
 <body>
     <header>
         <h1>Censo Galático</h1>
-        <p>Você pode digitar o nome do planeta ou escolher uma das opções no rodapé.<br> 
-            Assim que escolher o planeta, aparecerá mais informações sobre ele!</p>
+        <div class="planet-buttons" id="allPlanets"></div>
     </header>
+
     <section>
-        <input type="text" name="searchPlanet" id="searchPlanet" placeholder="Digite o nome do planeta"/>
-        <button onclick="searchPlanet()">Buscar</button>
-        <div id="planetData"></div> <br>
-        <table>  <tbody id="peopleData"></tbody> </table> <br>
-        <div id="allPlanets"></div>
+        <div class="search-container">
+            <input type="text" name="searchPlanet" id="searchPlanet" placeholder="Digite o nome do planeta"/>
+            <button onclick="searchPlanet()">Buscar</button>
+        </div>
+        
+        <div class="loading-container" id="loadingContainer">
+            <div class="loading"></div>
+            <p>Carregando dados...</p>
+        </div>
+
+        <div class="content-container">
+            <div class="planet-card" id="planetData"></div>
+
+            <div class="residents-container">
+                <table class="residents-table">
+                    <tbody id="peopleData"></tbody>
+                </table>
+            </div>
+        </div>
     </section>
+
     <footer>
         <p>&copy;<a href="https://www.linkedin.com/in/marcos-grocha/" target="_blank"> marcos-grocha</a></p>
     </footer>
